@@ -1,2 +1,11 @@
-
 $colors: #aaa, #bbb, #ccc, #ddd;
+
+@for $i from 1 to length($colors)+1 {
+    .container-#{$i} {
+        background-color: nth($colors, $i);
+    }
+}
+
+body {
+    background-color: black;
+}
